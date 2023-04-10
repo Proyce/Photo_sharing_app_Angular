@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "event-app": {
+    "photo-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/event-app",
+            "outputPath": "dist/photo-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "event-app:build"
+            "browserTarget": "photo-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "event-app:build:production"
+              "browserTarget": "photo-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "event-app:build"
+            "browserTarget": "photo-app:build"
           }
         },
         "test": {
@@ -110,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "event-app:serve"
+            "devServerTarget": "photo-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "event-app:serve:production"
+              "devServerTarget": "photo-app:serve:production"
             }
           }
         }
