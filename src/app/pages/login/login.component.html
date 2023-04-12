@@ -1,22 +1,34 @@
 <div class="container">
   <div class="form-container">
     <div class="title">Login</div>
-    <form>
+    <form [formGroup]="loginForm">
       <mat-form-field appearance="outline">
         <mat-label>Enter your email</mat-label>
-        <input type="text" matInput>
+        <input type="text" matInput formControlName="email" />
+        <mat-error *ngIf="loginForm.controls.email.invalid">
+          {{
+            loginForm.controls.email.hasError("required")
+              ? "Email is required"
+              : "Please enter a valid email"
+          }}
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Enter your password</mat-label>
-        <input type="password" matInput>
+        <input type="password" matInput formControlName="password" />
+        <mat-error *ngIf="loginForm.controls.password.invalid">
+          {{
+            loginForm.controls.password.hasError("required")
+              ? "Password is required"
+              : "Password must have atleast 6 characters"
+          }}
+        </mat-error>
       </mat-form-field>
     </form>
     <div class="buttons-container">
-      <button mat-raised-button class="login-button">
-        Login
-      </button>
+      <button mat-raised-button class="login-button">Login</button>
       <p>OR</p>
-      <button mat-button>Create account</button>
+      <button mat-button routerLink="/new-account">New account</button>
     </div>
   </div>
 </div>

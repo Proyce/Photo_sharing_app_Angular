@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "email": "ooseni@atbtechsoft.com",
+      "username": "test",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "email": "ooseni@atbtechsoft.com",
+      "username": "test2",
+      "password": "password",
+      "id": 2
+    },
+    {
+      "email": "ooseni@atbtechsoft.com",
+      "username": "test3",
+      "password": "password",
+      "id": 3
+    },
+    {
+      "email": "ooseni@atbtechsoft.com",
+      "username": "test",
+      "password": "password",
+      "id": 4
+    }
+  ],
+  "posts": []
+}
