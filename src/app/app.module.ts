@@ -8,14 +8,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { NewAccountComponent } from './pages/new-account/new-account.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
 
 const Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'new-account', component: NewAccountComponent },
+  { path: 'home', component: HomeComponent },
   { path: '*', component: StartComponent },
 ];
 
@@ -25,6 +30,7 @@ const Routes = [
     NavBarComponent,
     LoginComponent,
     NewAccountComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +42,9 @@ const Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSnackBarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [StartComponent],

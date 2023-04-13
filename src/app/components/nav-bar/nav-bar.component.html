@@ -2,4 +2,10 @@
   <div class="branding">
     <a routerLink="/" class="no-decor">📸PhotoAPP</a>
   </div>
+  <div class="account">
+    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logOut()">Logout</button>
+    </mat-menu>
+  </div>
 </div>

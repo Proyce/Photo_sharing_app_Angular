@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,7 +10,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./new-account.component.css'],
 })
 export class NewAccountComponent implements OnInit {
-  constructor(private fb: FormBuilder, private userSrv: UserService) {}
+  constructor(
+    private fb: FormBuilder,
+    private userSrv: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -18,14 +24,16 @@ export class NewAccountComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
-  createAccount(){
+  createAccount() {
     this.userSrv.createNewUser(this.newAccountForm.value).subscribe(
-      (res) => {
+      (res: User) => {
         console.log(res);
+        this.userSrv.user = res;
+        this.router.navigate(['/home'])
       },
-      (err)=> {
+      (err) => {
         console.log(err);
       }
-    )
+    );
   }
 }

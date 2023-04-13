@@ -23,6 +23,18 @@
       "username": "test",
       "password": "password",
       "id": 4
+    },
+    {
+      "email": "test@test.com",
+      "username": "testtest",
+      "password": "testepass",
+      "id": 5
+    },
+    {
+      "email": "ooseni@atbtechsoft.com",
+      "username": "user111",
+      "password": "password",
+      "id": 6
     }
   ],
   "posts": []
