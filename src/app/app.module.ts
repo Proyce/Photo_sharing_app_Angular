@@ -16,6 +16,8 @@ import { NewAccountComponent } from './pages/new-account/new-account.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
+// import AngularFireModule from'@angular/fire'
+// import AngularFireAuthModule from '@angular/fire/'
 
 const Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
