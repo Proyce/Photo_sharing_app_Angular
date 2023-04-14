@@ -29,6 +29,7 @@ export class NewAccountComponent implements OnInit {
       (res: User) => {
         console.log(res);
         this.userSrv.user = res;
+        localStorage.setItem('user', JSON.stringify(res))
         this.router.navigate(['/home'])
       },
       (err) => {

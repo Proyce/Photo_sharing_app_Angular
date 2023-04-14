@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { NewAccountComponent } from './pages/new-account/new-account.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,7 +45,8 @@ const Routes = [
     HttpClientModule,
     MatSnackBarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [StartComponent],

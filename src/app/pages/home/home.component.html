@@ -1,1 +1,43 @@
-<p>home works!</p>
+<div class="container">
+  <div class="content-wrapper">
+    <mat-form-field appearance="fill">
+      <textarea [(ngModel)]="text" matInput cdkTextareaAutosize cdkAutosizeMinRows="5" placeholder="Say something..."></textarea>
+    </mat-form-field>
+    <div class="new-post-actions-container">
+      <button mat-raised-button class="post-button">Post</button>
+    </div>
+
+    <mat-card class="post-card">
+      <mat-card-header>
+        <mat-card-title>
+          Proyce
+        </mat-card-title>
+      </mat-card-header>
+      <img src="assets/images/sample.jpg" alt="img" mat-card-image>
+      <mat-card-content>
+        <p>
+          Lovely!
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="like-button" mat-icon-button>
+          <mat-icon>favorite_border</mat-icon>
+        </button> <span>3 liked it</span>
+      </mat-card-actions>
+      <div class="comments-container">
+        <div class="comments">
+          <div class="title">
+            Comments
+          </div>
+          <p><b>Helen:</b> So amazing!</p>
+        </div>
+        <div class="comment-input">
+          <mat-form-field class="comment-form-field">
+            <input matInput type="text" placeholder="Add a comment">
+          </mat-form-field>
+          <button class="comment-button" mat-button>Comment</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

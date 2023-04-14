@@ -35,6 +35,12 @@
       "username": "user111",
       "password": "password",
       "id": 6
+    },
+    {
+      "email": "hdhdhdh@mail.com",
+      "username": "user101",
+      "password": "passswoff",
+      "id": 7
     }
   ],
   "posts": []

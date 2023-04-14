@@ -37,6 +37,9 @@ export class LoginComponent implements OnInit {
           console.log('matched');
           this.snackBar.open('Login successful', 'ok');
           this.userSrv.user = res[0];
+          console.log(res[0]);
+
+          localStorage.setItem('user', JSON.stringify(res[0]));
           this.router.navigate(['/home'])
         } else {
           console.log('Incorrect password');
